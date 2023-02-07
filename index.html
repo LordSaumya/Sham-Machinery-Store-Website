@@ -1,0 +1,121 @@
+
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Home | Sham Machinery Stores</title>
+    <link rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
+    <meta name="viewport" content="width = device-width, initial-scale = 1">
+    <link rel = "stylesheet" href = "style.css">
+  </head>
+  <body>
+    <!--HEADER-->
+    <div class = "header">
+      <span class = "title">Sham Machinery Stores</span>
+      <div class = "socialMediaBtnContainer"><a href = "https://www.instagram.com/sham_machinerystores/"><img src = "instaLogo.png" class = "socialMediaBtn"></a></div>
+    </div>
+    <!--NAVBAR-->
+    <div class = "navbar" id = "navbar">
+  <a href = "index.html" class = "homebtn"><img src = "home-icon.png" style = "width:23px;"></a><span class = "divider">|</span>
+  <a href = "Inventory.php" class = "nLink">Inventory</a><span class = "divider">|</span>
+  <a href = "About Us.html" class = "nLink">About Us</a><span class = "divider">|</span>
+  <a href = "Contact.php" class = "nLink">Contact</a><span class = "divider">|</span>
+  <div style = "height:100%"><div id="buttonDiv" style = "display:inline-block"></div></div>
+    </div><center>
+      <!--CONTENT-->
+    <div class = "content"><br><br>
+      <h1 class = "websiteTitle">Home</h1><br>
+
+      <!-- Slideshow -->
+      <div class="slideshow">
+
+        <div class="slide">
+          <img src="SS1.jpg" style="width:100%">
+        </div>
+        
+        <div class="slide">
+          <img src="SS2.jpg" style="width:100%">
+        </div>
+        
+        <div class="slide">
+          <img src="SS3.jpg" style="width:100%">
+        </div>
+
+        <div class="slide">
+          <img src="SS4.jpg" style="width:100%">
+        </div>
+
+        <div class="slide">
+          <img src="SS5.jpg" style="width:100%">
+        </div>
+
+        <div class="slide">
+          <img src="SS6.jpg" style="width:100%">
+        </div>
+        
+        <div class="slide">
+          <img src="SS7.jpg" style="width:100%">
+        </div>
+
+        </div>
+        <br><br>
+        <div style = "text-align: center;width:70%;font-size:25px;border: 2px grey solid;padding:12px;box-shadow:0 0 20px grey;">
+        Sham Machinery Stores in Buldhana is one of the leading businesses in the PVC Pipe Dealers. Also known for PVC Pipe Dealers, Electric Motor Dealers and much more.
+      </div>
+      <br><br>
+    </div>
+    </center>
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <script>
+      //Google Sign-in
+      function handleCredentialResponse(response) {
+        var email = (JSON.parse(atob((response.credential).split('.')[1])))["email"];
+        if (email == "sham.rathi007@gmail.com" || email == "saumyashah717@gmail.com"){
+          alert("Thank you for logging in. You will be redirected to the admin panel shortly.");
+          location.replace("./InventoryManagementConsole.php");
+        }
+        else{
+          alert("You are logged in as " + email +", but you don't have administrative privileges.")
+        }
+      }
+      window.onload = function () {
+        google.accounts.id.initialize({
+          client_id: "332635862647-fon7ro79s295r5pe04v1o9uo0qd6ago8.apps.googleusercontent.com",
+          callback: handleCredentialResponse
+        });
+        google.accounts.id.renderButton(
+          document.getElementById("buttonDiv"),
+          { theme: "outline", size: "large" }
+        );
+        google.accounts.id.prompt();
+      }
+
+      //Sticky navbar
+      window.onscroll = function() {stickyNavbar(window.pageYOffset)};
+      var navbar = document.getElementById("navbar");
+      var sticky = navbar.offsetTop;
+      function stickyNavbar(y) {
+        if (y >= sticky) {
+          navbar.classList.add("sticky")
+        } else {
+          navbar.classList.remove("sticky");
+        }
+      }
+
+      //Slideshow
+      var slideNumber = 0
+      function changeSlide() {
+        var slides = document.getElementsByClassName("slide");
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";  
+        }
+        slideNumber++;
+        if (slideNumber > slides.length) {
+          slideNumber = 1
+        }    
+        slides[slideNumber-1].style.display = "block";  
+        setTimeout(changeSlide, 2500);
+      }
+      changeSlide()
+  </script>
+  </body>
+</html>

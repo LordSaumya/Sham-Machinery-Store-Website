@@ -1,0 +1,114 @@
+
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>About Us | Sham Machinery Stores</title>
+    <link rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
+    <meta name="viewport" content="width = device-width, initial-scale = 1">
+    <link rel = "stylesheet" href = "style.css">
+  </head>
+  <body>
+    <!--HEADER-->
+    <div class = "header">
+      <span class = "title">Sham Machinery Stores</span>
+      <div class = "socialMediaBtnContainer"><a href = "https://www.instagram.com/sham_machinerystores/"><img src = "instaLogo.png" class = "socialMediaBtn"></a></div>
+    </div>
+    <!--NAVBAR-->
+    <div class = "navbar" id = "navbar">
+      <a href = "index.html" class = "homebtn"><img src = "home-icon.png" style = "width:23px;"></a><span class = "divider">|</span>
+      <a href = "Inventory.php" class = "nLink">Inventory</a><span class = "divider">|</span>
+      <a href = "About Us.html" class = "nLink">About Us</a><span class = "divider">|</span>
+      <a href = "Contact.php" class = "nLink">Contact</a><span class = "divider">|</span>
+      <div style = "height:100%"><div id="buttonDiv" style = "display:inline-block"></div></div>
+        </div><center>
+      <!--CONTENT-->
+    <div class = "content"><br><br>
+      <h1 class = "websiteTitle">About Us</h1><br>
+
+      <!-- Slideshow -->
+      <div class="slideshow">
+
+        <div class="slide">
+          <img src="SS1.jpg" style="width:100%">
+        </div>
+        
+        <div class="slide">
+          <img src="SS2.jpg" style="width:100%">
+        </div>
+        
+        <div class="slide">
+          <img src="SS3.jpg" style="width:100%">
+        </div>
+
+        <div class="slide">
+          <img src="SS4.jpg" style="width:100%">
+        </div>
+        
+        </div>
+      <br><br>
+      <div style = "text-align: center;width:70%;font-size: 18px">
+        Sham Machinery Stores in Mehkar, Buldhana is a top player in the category PVC Pipe Dealers in Buldhana.
+        Our well-known establishment acts as a one-stop destination servicing customers both local and from other parts of Buldhana.<br><br>
+        Over the course of our journey, our business has established a firm foothold in its industry. The belief that customer satisfaction is as important as our products and services
+        have helped us garner a vast base of customers, which continues to grow by the day.<br><br> We employs individuals that are dedicated towards their 
+        respective roles and put in a lot of effort to achieve the common vision and larger goals of the company. In the near future, we aim to expand our line of products and services and cater to a larger client base. 
+        In Buldhana, our store occupies a prominent location in Mehkar. It is an effortless task in commuting to this establishment as there are various modes of transport readily available.<br><br>We are known to provide top service 
+        in PVC pipes, electric motors, and other construction materials.
+      </div><br><br>
+    </div>
+    </center>
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <script>
+      //Google Sign-in
+      function handleCredentialResponse(response) {
+        var email = (JSON.parse(atob((response.credential).split('.')[1])))["email"];
+        if (email == "sham.rathi007@gmail.com" || email == "saumyashah717@gmail.com"){
+          alert("Thank you for logging in. You will be redirected to the admin panel shortly.");
+          location.replace("./InventoryManagementConsole.php");
+        }
+        else{
+          alert("You are logged in as " + email +", but you don't have administrative privileges.")
+        }
+      }
+      window.onload = function () {
+        google.accounts.id.initialize({
+          client_id: "332635862647-fon7ro79s295r5pe04v1o9uo0qd6ago8.apps.googleusercontent.com",
+          callback: handleCredentialResponse
+        });
+        google.accounts.id.renderButton(
+          document.getElementById("buttonDiv"),
+          { theme: "outline", size: "large" }
+        );
+        google.accounts.id.prompt();
+      }
+
+      //Sticky navbar
+      window.onscroll = function() {stickyNavbar(window.pageYOffset)};
+      var navbar = document.getElementById("navbar");
+      var sticky = navbar.offsetTop;
+      function stickyNavbar(y) {
+        if (y >= sticky) {
+          navbar.classList.add("sticky")
+        } else {
+          navbar.classList.remove("sticky");
+        }
+      }
+
+      //Slideshow
+      var slideNumber = 0
+      function changeSlide() {
+        var slides = document.getElementsByClassName("slide");
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";  
+        }
+        slideNumber++;
+        if (slideNumber > slides.length) {
+          slideNumber = 1
+        }    
+        slides[slideNumber-1].style.display = "block";  
+        setTimeout(changeSlide, 2500);
+      }
+      changeSlide()
+  </script>
+  </body>
+</html>

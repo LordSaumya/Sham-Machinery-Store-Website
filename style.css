@@ -1,0 +1,322 @@
+/****Font Imports****/
+@import url('https://fonts.googleapis.com/css?family=Advent+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap');
+
+html{
+  min-height:100vh;
+  height:auto;
+}
+body{
+ background-image: url("background.jpg");
+ background-repeat:no-repeat;
+ background-size:100% 100%;
+ margin:0;
+ height:100%;
+ width:100%;
+}
+.content {
+  overflow:auto;
+  width:79.6909492274%;
+  margin-right:auto;
+  margin-left:auto;
+  background-color:rgba(10,10,10,0.9);
+  opacity:1;
+  min-height:100vh;
+  height:100%;
+  color:white;
+  font-family:Trebuchet MS;
+}
+
+.header{
+  background-color:#142850;
+  color:white;
+  font-family:Trebuchet MS;
+  padding:40px;
+  z-index:99;
+}
+.socialMediaBtnContainer{
+  float:right;
+  margin:2px;
+  width:fit-content;
+}
+.socialMediaBtn{
+  max-width:60px;
+  border-radius:50%;
+  transition:0.2s;
+}
+.socialMediaBtn:hover{
+  box-shadow:0px 3px 3px RGBA(110,110,110,0.5);
+}
+.title{
+  font-family:'Advent Pro',Sans-Serif;
+  font-size:80px;
+  color:white;
+  font-weight:bold;
+}
+.navbar{
+  overflow: hidden;
+  width:100%;
+  height:54px;
+  flex-direction:row;
+  background-color:#D9D9DA;
+  text-align:center;
+  position:relative;
+  box-shadow:0px 3px 3px RGBA(110,110,110,0.5);
+  z-index:99;
+  display:flex;
+  justify-content: space-between;
+}
+.sticky{
+  position:fixed;
+  top:0;
+}
+.nLink {
+  float:left;
+  height:100%;
+  display: block;
+  color:black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  margin:auto;
+  transition:0.6s;
+  font-family:'Source Sans Pro',Sans-Serif;
+  flex-grow:1;
+}
+
+.divider{
+  float:left;
+  display: block;
+  color: gray;
+  text-align: center;
+  padding:10px;
+  text-decoration: none;
+  font-size: 22px;
+  cursor:pointer;
+}
+.nLink:hover {
+  background-color:#98989a;
+  color:snow;
+}
+.homebtn{
+  float:left;
+  display: block;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  width:7%;
+  transition:0.6s;
+}
+.homebtn:hover{
+  background-color:#98989a;
+  -webkit-filter: invert(100%);
+}
+
+.websiteTitle{
+  font-size:40px;
+  font-family:'Source Sans Pro';
+  color:white;
+}
+
+.slideshow{
+  max-width: 700px;
+  max-height:525px;
+  position: relative;
+  margin: auto;
+  border:1px black solid;
+}
+
+.slide{
+  box-shadow:0 0 20px grey;
+}
+
+.dropbtn {
+  background-color:white;
+  color:black;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: lightgrey;
+}
+
+.inventoryTable {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 80%;
+}
+
+.inventoryTable td, .inventoryTable th {
+  border: 1px solid #f1f1f1;
+  color:black;
+  background-color:white;
+  padding: 8px;
+}
+
+.inventoryTable tr th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #2E4C6D;
+  color: white;
+}
+
+.presentationImage{
+  display:inline-block;
+  border:1px solid black;
+  max-height: 400px;
+  max-width:80%;
+  transition:0.5s;
+  overflow:hidden;
+}
+.presentationImage:hover{
+  box-shadow:0 0 15px grey;
+}
+.summary{
+  font-family:'Source Sans Pro';
+  font-size:24px;
+}
+.submitInquiry{
+  width:70%;
+  padding:8px;
+}
+.submit{
+  font-size:25px;
+  font-family:'Source Sans Pro',sans-serif;
+  padding:9px 90px;
+  margin:20px;
+  background-color:#50D697;
+  box-shadow:0 0 10px grey;
+  border:none;
+  transition:0.5s;
+  text-align:center;
+}
+
+.submit:hover{
+  background-color:#27a56a;
+  color:white;
+}
+
+.submitInquiry input,.submitInquiry textarea{
+  width:90%;
+  padding:6px;
+  font-size:18px;
+  transition:0.8s;
+  font-family:Tahoma;
+  border:1px solid gray;
+  margin:auto;
+  border-radius:5px;
+}
+.submitInquiry label{
+  font-family:'Source Sans Pro';
+  font-size:20px;
+  padding:10px;
+  font-weight:lighter;
+  color:white;
+}
+.submitInquiry input:focus,.submitInquiry textarea:focus{
+  width:93%;
+  border-radius:15px;
+  padding:12px;
+  box-shadow:5px 6px 5px RGBA(120,120,120,0.5);
+  outline:none;
+}
+#searchBar{
+  width:50%;
+  padding:6px;
+  font-size:18px;
+  transition:0.8s;
+  font-family:Tahoma;
+  border:1px solid gray;
+  margin:auto;
+  border-radius:5px;
+}
+.DeleteBtn{
+  font-family:Trebuchet MS;
+  display:block;
+  width:80%;
+  padding:5px;
+  margin-left:auto;
+  margin-right:auto;
+  color:white;
+  background-color:#800000;
+  transition:0.4s;
+  outline:none;
+  border:0.5px grey solid;
+}
+.DeleteBtn:hover{
+  background-color:#4d0000;
+}
+.IMCFormCont{
+  width:40%;
+  padding:10px;
+  background-color:rgb(20,40,80);
+  box-shadow:0 0 8px #888888;
+  color:white;
+}
+.websiteSubtitle{
+  font-size:30px;
+  font-family:'Source Sans Pro';
+}
+
+.IMCForm input{
+  width:70%;
+  padding:6px;
+  font-size:15px;
+  transition:0.8s;
+  font-family:Tahoma;
+  border:1px solid gray;
+  margin:auto;
+  border-radius:5px;
+}
+.IMCForm label{
+  font-family:'Source Sans Pro';
+  font-size:15px;
+  padding:10px;
+  font-weight:lighter;
+  color:white;
+}
+.IMCForm input:focus{
+  width:73%;
+  border-radius:15px;
+  padding:12px;
+  box-shadow:5px 6px 5px RGBA(120,120,120,0.5);
+  outline:none;
+}
+
+input::-webkit-outer-spin-button,input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
